@@ -1,0 +1,2 @@
+include cyPyon
+recursive-include cython *

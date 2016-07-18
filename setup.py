@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
 import sys
-print sys.version
 from distutils.core import setup
 from distutils.extension import Extension
 
@@ -17,12 +16,12 @@ ext_modules = [ ]
 
 if use_cython:
     ext_modules += [
-        Extension("cyPyon", [ "Root.pyx" ]),
+        Extension("cyPyon", [ "cyPyon/Root.pyx" ]),
     ]
     cmdclass.update({ 'build_ext': build_ext })
 else:
     ext_modules += [
-        Extension("cyPyon", [ "Root.c" ]),
+        Extension("cyPyon", [ "cyPyon/Root.c" ]),
     ]
 
 setup(
